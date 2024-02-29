@@ -19,19 +19,32 @@ The chatbot is designed for an interview with Element[X] and aims to provide a p
 
 1. Clone the repository from GitHub:
 
-`git clone <repository_url>`
+```
+git clone <repository_url>
+```
 
 2. Navigate to the project directory:
-   `cd <project_directory>`
+
+```
+cd <project_directory>
+```
 
 3. Install dependencies using npm:
 
-`npm install`
+```
+npm install
+```
 
 4. Set up your OpenAI API key by creating a `.env` file and adding your API key:
-   `OPENAI_API_KEY=your_openai_api_key_here`
+
+```
+OPENAI_API_KEY=your_openai_api_key_here
+```
 
 5. Run the project:
-   `npm run dev`
+
+```
+npm run dev
+```
 
 6. Access the chatbot application in your browser at `http://localhost:3000`.
