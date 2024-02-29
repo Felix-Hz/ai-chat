@@ -1,13 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { Message } from "../WindowChat/types";
 import { WindowChat } from "../WindowChat/WindowChat";
-import { AssistantStatus } from "../AssistantStatus/AssistantStatus";
 import InputMessage from "../InputMessage/InputMessage";
+import { AssistantStatus } from "../AssistantStatus/AssistantStatus";
 
 export const InitiateChat = () => {
+  const [userInput, setUserInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [windowExpand, setWindowExpand] = useState(false);
   const [assistantTyping, setAssistantTyping] = useState(false);
+  const [chatHistory, setChatHistory] = useState<Message[]>([]);
 
   const handleFormSubmission = () => {
     setWindowExpand(!windowExpand);
@@ -33,7 +37,16 @@ export const InitiateChat = () => {
       )}
 
       {/* Chat Expansion */}
-      {windowExpand && <WindowChat />}
+      {windowExpand && (
+        <WindowChat
+          userInput={userInput}
+          setUserInput={setUserInput}
+          chatHistory={chatHistory}
+          setChatHistory={setChatHistory}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+        />
+      )}
 
       {/* Message Input Bar */}
       <InputMessage
