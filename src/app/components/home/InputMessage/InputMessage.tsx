@@ -1,22 +1,27 @@
 type InputMessageProps = {
-  handleFormSubmission: () => void;
-  triggerAssistant: () => void;
+  handleUserInput: () => void;
+  userInput: string;
+  setUserInput: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const InputMessage: React.FC<InputMessageProps> = ({
-  handleFormSubmission,
-  triggerAssistant,
+  handleUserInput,
+  userInput,
+  setUserInput,
 }) => {
   return (
     <div className="px-4 py-3 flex items-center bg-gray-200/75 relative">
       <input
         type="text"
         placeholder="Type your message..."
+        value={userInput}
+        onChange={(e) => {
+          setUserInput(e.target.value);
+        }}
         onKeyDown={(event) => {
           if (event.key === "Enter") {
             event.preventDefault();
-            handleFormSubmission();
-            triggerAssistant();
+            handleUserInput();
           }
         }}
         className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500 z-10"
@@ -24,8 +29,7 @@ const InputMessage: React.FC<InputMessageProps> = ({
       <button
         className="cursor-pointer absolute right-8 top-[34px] transform -translate-y-1/2 z-10 opacity-45"
         onClick={() => {
-          handleFormSubmission();
-          triggerAssistant();
+          handleUserInput();
         }}
       >
         <svg
