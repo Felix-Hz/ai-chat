@@ -16,8 +16,10 @@ export const AssistantStatus: React.FC<AssistantStatusProps> = ({
           isLoading ? "animate-pulse" : ""
         }`}
       >
-        <p className="inline text-2xl">👩🏻‍💻</p>
-        <p className="inline pl-2 opacity-75 text-gray-800">{status}</p>
+        <p className="inline xs:text-lg text-2xl">👩🏻‍💻</p>
+        <p className="inline pl-2 xs:ml-2 xs:text-sm opacity-75 text-gray-800">
+          {status}
+        </p>
       </div>
 
       {/* TODO: Add closing chat functionality */}
