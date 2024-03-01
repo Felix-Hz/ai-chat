@@ -7,6 +7,7 @@ export const Header = () => {
     <header>
       <nav className="m-8 xs:mt-4 xs:mb-2 text-xl text-opacity-65 text-gray-800">
         <ul className="flex justify-end xs:justify-center list-none">
+          {/* LinkedIn */}
           <Link
             href="https://www.linkedin.com/in/felix-hernandez-vieyra/"
             target="_blank"
@@ -31,6 +32,8 @@ export const Header = () => {
               </svg>
             </li>
           </Link>
+
+          {/* GitHub */}
           <Link
             href="https://github.com/Felix-Hz"
             target="_blank"
@@ -55,6 +58,8 @@ export const Header = () => {
               </svg>
             </li>
           </Link>
+
+          {/* Curriculum */}
           <Link
             href="https://drive.google.com/file/d/1NeDEZgTRqM5hZeJTbbrCUKv3gMVARkz8/view?usp=drive_link"
             target="_blank"

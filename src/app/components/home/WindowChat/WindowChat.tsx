@@ -3,10 +3,7 @@ import { WindowChatProps } from "./types";
 export const WindowChat: React.FC<WindowChatProps> = ({ chatHistory }) => {
   return (
     <div className="pl-4 pr-1 text-gray-800/60 grow">
-      <div
-        className="overflow-y-auto p-4"
-        style={{ maxHeight: "459px", overflow: "auto" }}
-      >
+      <div className="overflow-y-auto p-4 max-h-[459px] xs:max-h-[290px] xs:h-[290px] overflow-auto">
         {chatHistory.map((message, index: number) => (
           <div
             key={index}
