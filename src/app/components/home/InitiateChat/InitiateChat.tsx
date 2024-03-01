@@ -2,7 +2,7 @@
 
 import OpenAI from "openai";
 import { useState } from "react";
-import { Message } from "../WindowChat/types";
+import { WindowChatProps, Message } from "../WindowChat/types";
 import { WindowChat } from "../WindowChat/WindowChat";
 import InputMessage from "../InputMessage/InputMessage";
 import { AssistantStatus } from "../AssistantStatus/AssistantStatus";
@@ -83,6 +83,7 @@ export const InitiateChat = () => {
           windowExpand={windowExpand}
           setWindowExpand={setWindowExpand}
           isLoading={isLoading}
+          setChatHistory={setChatHistory}
         />
       ) : (
         <AssistantStatus
@@ -90,20 +91,21 @@ export const InitiateChat = () => {
           windowExpand={windowExpand}
           setWindowExpand={setWindowExpand}
           isLoading={isLoading}
+          setChatHistory={setChatHistory}
         />
       )}
 
       {/* Chat Expansion */}
-        {windowExpand && (
-          <WindowChat
-            userInput={userInput}
-            setUserInput={setUserInput}
-            chatHistory={chatHistory}
-            setChatHistory={setChatHistory}
-            isLoading={isLoading}
-            setIsLoading={setIsLoading}
-          />
-        )}
+      {windowExpand && (
+        <WindowChat
+          userInput={userInput}
+          setUserInput={setUserInput}
+          chatHistory={chatHistory}
+          setChatHistory={setChatHistory}
+          isLoading={isLoading}
+          setIsLoading={setIsLoading}
+        />
+      )}
 
       {/* Message Input Bar */}
       <InputMessage
