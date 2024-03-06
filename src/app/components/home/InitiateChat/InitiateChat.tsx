@@ -7,10 +7,10 @@ import { WindowChat } from "../WindowChat/WindowChat";
 import InputMessage from "../InputMessage/InputMessage";
 import { AssistantStatus } from "../AssistantStatus/AssistantStatus";
 
-// const openai = new OpenAI({
-//   apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-//   dangerouslyAllowBrowser: true,
-// });
+const openai = new OpenAI({
+  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true,
+});
 
 export const InitiateChat = () => {
   const [userInput, setUserInput] = useState("");
@@ -63,6 +63,7 @@ export const InitiateChat = () => {
           newAssistantMessage,
         ]);
       }
+      console.error("NOTE: I still have to set up a limited budget for this project or find a way to do dummy calls")
       setIsLoading(false);
     }
   };
