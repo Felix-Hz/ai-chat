@@ -53,10 +53,10 @@ export const InitiateChat = () => {
           console.error("OpenAI's assistant is busy. Try again later.");
         }
       } catch (error: any) {
-        console.error("Error calling OpenAI API:", error);
+        // console.error("Error calling OpenAI API:", error);
         const newAssistantMessage: Message = {
           role: "assistant",
-          content: `Freyja is not connected to OpenAI yet. The error code is ${error.status}, but you can check your console for more details.`,
+          content: `You can sneak peek OpenAI's API integration with Freyja on the code: https://rb.gy/6hyv5u`,
         };
         setChatHistory((previousChat) => [
           ...previousChat,
