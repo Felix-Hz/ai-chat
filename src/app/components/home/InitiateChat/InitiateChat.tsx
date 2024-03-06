@@ -54,17 +54,21 @@ export const InitiateChat = () => {
         }
       } catch (error: any) {
         // console.error("Error calling OpenAI API:", error);
-        const newAssistantMessage: Message = {
-          role: "assistant",
-          content: `You can sneak peek OpenAI's API integration with Freyja on the code: https://rb.gy/6hyv5u`,
-        };
-        setChatHistory((previousChat) => [
-          ...previousChat,
-          newAssistantMessage,
-        ]);
+        setTimeout(async () => {
+          const newAssistantMessage: Message = {
+            role: "assistant",
+            content: `You can sneak peek OpenAI's API integration with Freyja on the code: https://rb.gy/6hyv5u`,
+          };
+          setChatHistory((previousChat) => [
+            ...previousChat,
+            newAssistantMessage,
+          ]);
+          console.error(
+            "NOTE: I still have to set up a limited budget for this project or find a way to do dummy calls"
+          );
+          setIsLoading(false);
+        }, 1200);
       }
-      console.error("NOTE: I still have to set up a limited budget for this project or find a way to do dummy calls")
-      setIsLoading(false);
     }
   };
 
