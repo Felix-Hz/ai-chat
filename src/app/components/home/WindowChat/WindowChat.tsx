@@ -25,7 +25,7 @@ export const WindowChat: React.FC<WindowChatProps> = ({ chatHistory }) => {
                 <div className="max-w-full rounded-full pt-1.5 w-9 h-9 text-center inline-block bg-fuchsia-500 text-fuchsia-50">
                   F
                 </div>
-                <div className="max-w-md xs:max-w-40 mx-2 my-2 inline-block text-left p-2 bg-fuchsia-100 text-fuchsia-500 rounded-md">
+                <div className="max-w-md xs:max-w-44 mx-2 my-2 inline-block text-justify p-3 xs:p-3.5 bg-fuchsia-100 text-fuchsia-500 rounded-md">
                   {message.content}
                 </div>
               </div>
