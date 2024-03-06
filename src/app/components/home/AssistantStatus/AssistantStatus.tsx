@@ -21,8 +21,6 @@ export const AssistantStatus: React.FC<AssistantStatusProps> = ({
           {status}
         </p>
       </div>
-
-      {/* TODO: Add closing chat functionality */}
       <section
         className={`flex-no-shrink fill-current flex flex-row space-x-6 ${
           !windowExpand ? "hidden" : ""

@@ -2,7 +2,7 @@
 
 import OpenAI from "openai";
 import { useState } from "react";
-import { WindowChatProps, Message } from "../WindowChat/types";
+import { Message } from "../WindowChat/types";
 import { WindowChat } from "../WindowChat/WindowChat";
 import InputMessage from "../InputMessage/InputMessage";
 import { AssistantStatus } from "../AssistantStatus/AssistantStatus";

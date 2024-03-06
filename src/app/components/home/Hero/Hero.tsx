@@ -7,7 +7,7 @@ export const Hero = () => {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
       </div>
       <h1 className="text-6xl xs:mb-3 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight tracking-tighter">
-        Element[X]
+        Assistant[X]
       </h1>
       <h2 className="text-4xl xs:text-3xl text-gray-500 mb-8 xs:hidden">Artificial Intelligence Chatbot Experience</h2>
       <InitiateChat />
