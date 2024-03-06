@@ -78,7 +78,7 @@ export const InitiateChat = () => {
     <section
       className={`max-w-7xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden border transition duration-300 hover:shadow-2xl hover:border-gray-500/50 flex flex-col justify-between ${
         windowExpand
-          ? "w-full h-[600px] xs:h-[440px] shadow-xl border-gray-600/40 xs:max-w-[355px] xs:w-full "
+          ? "w-full h-[550px] xs:h-[440px] shadow-xl border-gray-600/40 xs:max-w-[355px] xs:w-full "
           : ""
       }`}
     >
